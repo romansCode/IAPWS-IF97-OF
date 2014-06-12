@@ -1,0 +1,4 @@
+IAPWSThermo/IAPWS-IF97.C
+thermoIAPWS/IAPWSthermos.C
+
+LIB = $(FOAM_USER_LIBBIN)/libIAPWSRangeThermo
