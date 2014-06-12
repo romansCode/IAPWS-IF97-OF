@@ -2,3 +2,21 @@ IAPWS-IF97-OF
 =============
 
 IAPWS-IF97 water properties for OpenFOAM (R)
+
+* Installation
+
+  ** Prerequisites
+
+    1. Full installation of OpenFOAM >=2.2 from www.openfoam.org
+    2. Installed freesteam >=2.0 from http://freesteam.sourceforge.net/ 
+  
+  ** Installation
+  
+    1. git clone https://github.com/romansCode/IAPWS-IF97-OF.git
+    2. cd IAPWS-IF97-OF
+    3. wmake libso
+
+* Usage
+  
+  1. add libIAPWSRangeThermo.so to the libraries in controlDict
+  2. use the thermophysicalProperties file provided in examples

@@ -1,0 +1,48 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      thermophysicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+thermoType 
+{
+    type            heRhoThermo;    // Thermophysical model based on sensible enthalpy
+    mixture         pureMixture;    // Only water
+    transport       IAPWSTransport; // (mu, k)
+    thermo          hIAPWS;         // (Cp)
+    equationOfState eosIAPWS;       // (rho)
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+
+// outside the pressure and temperature range, the properties will be capped to
+// the min and max values at the range limits
+
+mixture
+{
+    IAPWSProperties
+    {
+        TMax    1073;   // max allowed temperature
+        TMin    500;    // minimal allowed temperature
+        pMax    300e5;  // max allowed pressure
+        pMin    221e5;  // min allowed pressure
+    }
+
+    specie
+    {
+        nMoles          1;
+        molWeight       18;   // Water
+    }
+}
+
+// ************************************************************************* //
