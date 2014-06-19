@@ -18,5 +18,10 @@ IAPWS-IF97 water properties for OpenFOAM (R)
 
 * Usage
   
-  1. add libIAPWSRangeThermo.so to the libraries in controlDict
-  2. use the thermophysicalProperties file provided in examples
+  1. add libIAPWSRangeThermo.so and libfreesteam.so to the libraries in controlDict
+     libs
+     {
+       "libIAPWSRangeThermo.so"
+       "libfreesteam.so"
+     }
+  2. use the thermophysicalProperties file provided in example folder
