@@ -1,0 +1,9 @@
+eosIAPWS
+hIAPWS
+IAPWSThermo
+IAPWSTransport
+thermoIAPWS
+/home/roman/OpenFOAM-2.3.0/src/finiteVolume/lnInclude
+/home/roman/OpenFOAM-2.3.0/src/thermophysicalModels/basic/lnInclude
+/home/roman/OpenFOAM-2.3.0/src/thermophysicalModels/specie/lnInclude
+/home/roman/OpenFOAM-2.3.0/src/OpenFOAM/lnInclude
