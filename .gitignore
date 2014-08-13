@@ -48,6 +48,7 @@ Makefile*
 *.config
 *.files
 *.includes
+.creator.user
 
 # from compiling
 lnInclude/*
