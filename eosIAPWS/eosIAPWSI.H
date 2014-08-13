@@ -121,15 +121,15 @@ inline Foam::scalar Foam::eosIAPWS<Specie>::rho
 {
     // TODO: give warnings when clipping
     // set range for temperature
-    T = min(T,TMax_);  // bound max temperature
-    T = max(T,TMin_);  // bound min temperature
+    scalar TLim = min(T,TMax_);  // bound max temperature
+    TLim = max(TLim,TMin_);  // bound min temperature
 
     // set range for pressure
-    p = min(p,pMax_);   // bound max pressure
-    p = max(p,pMin_);   // bound min pressure
+    scalar pLim = min(p,pMax_);   // bound max pressure
+    pLim = max(pLim,pMin_);   // bound min pressure
 
     // return value
-    return rho_pT(p,T);
+    return rho_pT(pLim,TLim);
 }
 
 
@@ -142,16 +142,16 @@ inline Foam::scalar Foam::eosIAPWS<Specie>::psi
 {
     // TODO: give warnings when clipping
     // set range for temperature
-    T = min(T,TMax_);  // bound max temperature
-    T = max(T,TMin_);  // bound min temperature
+    scalar TLim = min(T,TMax_);  // bound max temperature
+    TLim = max(TLim,TMin_);  // bound min temperature
 
     // set range for pressure
-    p = min(p,pMax_);   // bound max pressure
-    p = max(p,pMin_);   // bound min pressure
+    scalar pLim = min(p,pMax_);   // bound max pressure
+    pLim = max(pLim,pMin_);   // bound min pressure
 
     // return value
 
-    return psiH_pT(p,T);  // #NOTE: for compressibility
+    return psiH_pT(pLim,TLim);  // #NOTE: for compressibility
 
 }
 
@@ -165,15 +165,15 @@ inline Foam::scalar Foam::eosIAPWS<Specie>::Z
 {
     // TODO: give warnings when clipping
     // set range for temperature
-    T = min(T,TMax_);  // bound max temperature
-    T = max(T,TMin_);  // bound min temperature
+    scalar TLim = min(T,TMax_);  // bound max temperature
+    TLim = max(TLim,TMin_);  // bound min temperature
 
     // set range for pressure
-    p = min(p,pMax_);   // bound max pressure
-    p = max(p,pMin_);   // bound min pressure
+    scalar pLim = min(p,pMax_);   // bound max pressure
+    pLim = max(pLim,pMin_);   // bound min pressure
 
     // return value
-    return p/rho_pT(p,T)/RSpecific_/T; // #NOTE: for compressibility
+    return pLim/rho_pT(pLim,TLim)/RSpecific_/TLim; // #NOTE: for compressibility
 }
 
 
@@ -186,15 +186,15 @@ inline Foam::scalar Foam::eosIAPWS<Specie>::cpMcv
 {
     // TODO: give warnings when clipping
     // set range for temperature
-    T = min(T,TMax_);  // bound max temperature
-    T = max(T,TMin_);  // bound min temperature
+    scalar TLim = min(T,TMax_);  // bound max temperature
+    TLim = max(TLim,TMin_);  // bound min temperature
 
     // set range for pressure
-    p = min(p,pMax_);   // bound max pressure
-    p = max(p,pMin_);   // bound min pressure
+    scalar pLim = min(p,pMax_);   // bound max pressure
+    pLim = max(pLim,pMin_);   // bound min pressure
 
     // return value
-    return (cp_pT(p,T)-cv_pT(p,T));
+    return (cp_pT(pLim,TLim)-cv_pT(pLim,TLim));
 }
 
 
