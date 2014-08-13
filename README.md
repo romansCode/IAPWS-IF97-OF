@@ -14,7 +14,7 @@ IAPWS-IF97 water properties for OpenFOAM (R)
   
     1. git clone https://github.com/romansCode/IAPWS-IF97-OF.git
     2. cd IAPWS-IF97-OF
-    3. wmake libso
+    3. wclean && wmake libso
 
 * Usage
   
