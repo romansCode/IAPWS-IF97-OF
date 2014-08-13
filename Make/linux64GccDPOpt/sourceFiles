@@ -1,3 +1,0 @@
-SOURCE = \
-IAPWSThermo/IAPWS-IF97.C\
-thermoIAPWS/IAPWSthermos.C

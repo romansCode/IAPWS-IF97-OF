@@ -1,3 +1,0 @@
-OBJECTS = \
-$(OBJECTS_DIR)/IAPWS-IF97.o\
-$(OBJECTS_DIR)/IAPWSthermos.o
