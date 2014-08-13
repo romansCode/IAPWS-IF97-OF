@@ -60,9 +60,13 @@ Roman Thiele
 Reactor Technology, Physics, KTH
 Stockholm, Sweden
 
-SourceFiles
+Original SourceFiles
     thermoI.H
     thermo.C
+
+New SourceFiles
+    thermoIAPWSI.H
+    thermoIAPWS.C
 
 \*---------------------------------------------------------------------------*/
 
