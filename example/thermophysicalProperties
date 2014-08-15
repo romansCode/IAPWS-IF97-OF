@@ -32,8 +32,6 @@ mixture
 {
     IAPWSProperties
     {
-        TMax    1073;   // max allowed temperature
-        TMin    500;    // minimal allowed temperature
         pMax    300e5;  // max allowed pressure
         pMin    221e5;  // min allowed pressure
     }
