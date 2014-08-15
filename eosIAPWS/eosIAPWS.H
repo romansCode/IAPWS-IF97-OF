@@ -108,10 +108,10 @@ class eosIAPWS
     static const scalar RSpecific_ = 0.461526e3;  // #NOTE: for compressibility
 
     //- max temperature at which clipping occurs [K]
-    const scalar TMax_;
+    static const scalar TMax_ = 1073;
 
     //- min temperature at which clipping occurs [K]
-    const scalar TMin_;
+    static const scalar TMin_ = 273.15;
 
     //- max pressure at which clipping occurs [K]
     const scalar pMax_;
@@ -128,8 +128,6 @@ public:
         inline eosIAPWS
         (
             const Specie& sp,
-            const scalar TMax,
-            const scalar TMin,
             const scalar pMax,
             const scalar pMin
         );

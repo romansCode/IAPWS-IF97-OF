@@ -32,15 +32,11 @@ template<class EquationOfState>
 inline Foam::hIAPWSThermo<EquationOfState>::hIAPWSThermo
 (
     const EquationOfState& pt,
-    const scalar TMax,
-    const scalar TMin,
     const scalar pMax,
     const scalar pMin
 )
 :
     EquationOfState(pt),
-    TMax_(TMax),
-    TMin_(TMin),
     pMax_(pMax),
     pMin_(pMin)
 {}
@@ -55,8 +51,6 @@ inline Foam::hIAPWSThermo<EquationOfState>::hIAPWSThermo
 )
 :
     EquationOfState(pt),
-    TMax_(pt.TMax_),
-    TMin_(pt.TMin_),
     pMax_(pt.pMax_),
     pMin_(pt.pMin_)
 {}
@@ -70,8 +64,6 @@ inline Foam::hIAPWSThermo<EquationOfState>::hIAPWSThermo
 )
 :
     EquationOfState(name, pt),
-    TMax_(pt.TMax_),
-    TMin_(pt.TMin_),
     pMax_(pt.pMax_),
     pMin_(pt.pMin_)
 {}

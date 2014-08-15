@@ -32,15 +32,11 @@ template<class Specie>
 inline Foam::eosIAPWS<Specie>::eosIAPWS
 (
     const Specie& sp,
-    const scalar TMax,
-    const scalar TMin,
     const scalar pMax,
     const scalar pMin
 )
 :
     Specie(sp),
-    TMax_(TMax),
-    TMin_(TMin),
     pMax_(pMax),
     pMin_(pMin)
 {}
@@ -55,8 +51,6 @@ inline Foam::eosIAPWS<Specie>::eosIAPWS
 )
 :
     Specie(ip),
-    TMax_(ip.TMax_),
-    TMin_(ip.TMin_),
     pMax_(ip.pMax_),
     pMin_(ip.pMin_)
 {}
@@ -70,8 +64,6 @@ inline Foam::eosIAPWS<Specie>::eosIAPWS
 )
 :
     Specie(name, ip),
-    TMax_(ip.TMax_),
-    TMin_(ip.TMin_),
     pMax_(ip.pMax_),
     pMin_(ip.pMin_)
 {}

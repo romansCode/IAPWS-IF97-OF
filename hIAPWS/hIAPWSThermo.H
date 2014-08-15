@@ -112,10 +112,10 @@ class hIAPWSThermo
         static const scalar Sf_=0;
 
         //- max temperature at which clipping occurs [K]
-        const scalar TMax_;
+        static const scalar TMax_ = 1073;
 
         //- min temperature at which clipping occurs [K]
-        const scalar TMin_;
+        static const scalar TMin_ = 273;
 
         //- max pressure at which clipping occurs [K]
         const scalar pMax_;
@@ -129,8 +129,6 @@ class hIAPWSThermo
         inline hIAPWSThermo
         (
             const EquationOfState& pt,
-            const scalar TMax,
-            const scalar TMin,
             const scalar pMax,
             const scalar pMin
         );

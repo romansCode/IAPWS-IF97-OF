@@ -36,8 +36,6 @@ inline Foam::IAPWSTransport<Thermo>::IAPWSTransport
 )
 :
     Thermo(pt),
-    TMax_(pt.TMax_),
-    TMin_(pt.TMin_),
     pMax_(pt.pMax_),
     pMin_(pt.pMin_)
 {}
@@ -48,8 +46,6 @@ inline Foam::IAPWSTransport<Thermo>::IAPWSTransport
 (const Thermo& t)
 :
     Thermo(t),
-    TMax_(t.TMax_),
-    TMin_(t.TMin_),
     pMax_(t.pMax_),
     pMin_(t.pMin_)
 
@@ -64,8 +60,6 @@ inline Foam::IAPWSTransport<Thermo>::IAPWSTransport
 )
 :
     Thermo(name, pt),
-    TMax_(pt.TMax_),
-    TMin_(pt.TMin_),
     pMax_(pt.pMax_),
     pMin_(pt.pMin_)
 

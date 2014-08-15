@@ -37,15 +37,11 @@ template<class Specie>
 eosIAPWS<Specie>::eosIAPWS(Istream& is)
 :
     Specie(is),
-    TMax_(0.0),
-    TMin_(0.0),
     pMax_(0.0),
     pMin_(0.0)
 {
     // TODO: change to only read if values are given, otherwise use full range
     const dictionary& dict("thermophysicalProperties");
-    TMax_ = readScalar(dict.subDict("IAPWSProperties").lookup("TMax"));
-    TMin_ = readScalar(dict.subDict("IAPWSProperties").lookup("TMin"));
     pMax_ = readScalar(dict.subDict("IAPWSProperties").lookup("pMax"));
     pMin_ = readScalar(dict.subDict("IAPWSProperties").lookup("pMin"));
 }
@@ -55,8 +51,6 @@ template<class Specie>
 eosIAPWS<Specie>::eosIAPWS(const dictionary& dict)
 :
     Specie(dict),
-    TMax_(readScalar(dict.subDict("IAPWSProperties").lookup("TMax"))),
-    TMin_(readScalar(dict.subDict("IAPWSProperties").lookup("TMin"))),
     pMax_(readScalar(dict.subDict("IAPWSProperties").lookup("pMax"))),
     pMin_(readScalar(dict.subDict("IAPWSProperties").lookup("pMin")))
 {
