@@ -54,39 +54,39 @@ inline Foam::scalar Foam::species::thermo<Thermo, Type>::T
 //    Info << "enthalpy " << f << ", temperature " << T_ph(p,f) << endl;
 
 
-//    return T_ph(p,f);
+    return T_ph(p,f);
 
-    scalar Test = T0;
-    scalar Tnew = T0;
-    scalar Ttol = T0*tol_;
-    int    iter = 0;
+//    scalar Test = T0;
+//    scalar Tnew = T0;
+//    scalar Ttol = T0*tol_;
+//    int    iter = 0;
 
-    do
-    {
-        Test = Tnew;
-        Tnew =
-            (this->*limit)
-            (Test - ((this->*F)(p, Test) - f)/(this->*dFdT)(p, Test));
+//    do
+//    {
+//        Test = Tnew;
+//        Tnew =
+//            (this->*limit)
+//            (Test - ((this->*F)(p, Test) - f)/(this->*dFdT)(p, Test));
 
-        if (iter++ > maxIter_)
-        {
-            FatalErrorIn
-            (
-                "thermo<Thermo, Type>::T(scalar f, scalar T0, "
-                "scalar (thermo<Thermo, Type>::*F)"
-                "(const scalar) const, "
-                "scalar (thermo<Thermo, Type>::*dFdT)"
-                "(const scalar) const, "
-                "scalar (thermo<Thermo, Type>::*limit)"
-                "(const scalar) const"
-                ") const"
-            )   << "Maximum number of iterations exceeded"
-                << abort(FatalError);
-        }
+//        if (iter++ > maxIter_)
+//        {
+//            FatalErrorIn
+//            (
+//                "thermo<Thermo, Type>::T(scalar f, scalar T0, "
+//                "scalar (thermo<Thermo, Type>::*F)"
+//                "(const scalar) const, "
+//                "scalar (thermo<Thermo, Type>::*dFdT)"
+//                "(const scalar) const, "
+//                "scalar (thermo<Thermo, Type>::*limit)"
+//                "(const scalar) const"
+//                ") const"
+//            )   << "Maximum number of iterations exceeded"
+//                << abort(FatalError);
+//        }
 
-    } while (mag(Tnew - Test) > Ttol);
+//    } while (mag(Tnew - Test) > Ttol);
 
-    return Tnew;
+//    return Tnew;
 }
 
 
