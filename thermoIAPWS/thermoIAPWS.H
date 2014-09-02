@@ -55,6 +55,14 @@ Description
         molWeight       18;   // Water
     }
 
+    subdictionary for the pressure limitations is
+
+    IAPWSProperties
+    {
+        pMax    300e5;  // upper pressure limit
+        pMin    221e5;  // lower pressure limit
+    }
+
 
 Roman Thiele
 Reactor Technology, Physics, KTH
