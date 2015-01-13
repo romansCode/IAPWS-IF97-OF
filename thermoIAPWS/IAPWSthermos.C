@@ -1,13 +1,13 @@
-
 /*---------------------------------------------------------------------------*\
-  =========                 |
-  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
-   \\    /   O peration     |
-    \\  /    A nd           | Copyright (C) 2011-2012 OpenFOAM Foundation
-     \\/     M anipulation  |
+=========                 |
+\\      /  F ield         | Unsupported Contributions for OpenFOAM
+ \\    /   O peration     |
+  \\  /    A nd           | Copyright (C) 2015 Roman Thiele
+   \\/     M anipulation  |
 -------------------------------------------------------------------------------
+
 License
-    This file is part of OpenFOAM.
+    This file is a derivative work of OpenFOAM.
 
     OpenFOAM is free software: you can redistribute it and/or modify it
     under the terms of the GNU General Public License as published by
