@@ -99,7 +99,7 @@ inline Foam::scalar Foam::hIAPWSThermo<EquationOfState>::cp
 
     // return value
     // multiplication by W(), because assumed to be given per mole
-    return cp_pT(pLim,TLim)*this->W();
+    return cp_pT(pLim, TLim)*this->W();
 }
 
 
@@ -120,7 +120,7 @@ inline Foam::scalar Foam::hIAPWSThermo<EquationOfState>::ha
 
     // return value
     // multiplication by W(), because assumed to be given per mole
-    return h_pT(pLim,TLim)*this->W();
+    return h_pT(pLim, TLim)*this->W();
 }
 
 
@@ -169,7 +169,7 @@ inline Foam::scalar Foam::hIAPWSThermo<EquationOfState>::s
     pLim = max(pLim,pMin_);   // bound min pressure
 
     // return value
-    return s_pT(pLim,TLim);
+    return s_pT(pLim, TLim);
 }
 
 

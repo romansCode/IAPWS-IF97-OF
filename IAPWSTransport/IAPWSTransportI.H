@@ -119,7 +119,7 @@ inline Foam::scalar Foam::IAPWSTransport<Thermo>::mu
     pLim = max(pLim,pMin_);   // bound min pressure
 
     // return value
-    return mu_pT(pLim,TLim);
+    return mu_pT(pLim, TLim);
 }
 
 
@@ -141,7 +141,7 @@ inline Foam::scalar Foam::IAPWSTransport<Thermo>::kappa
 
 
     // return value
-    return tc_pT(pLim,TLim);
+    return tc_pT(pLim, TLim);
 }
 
 

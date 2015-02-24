@@ -122,7 +122,7 @@ inline Foam::scalar Foam::eosIAPWS<Specie>::rho
     pLim = max(pLim,pMin_);   // bound min pressure
 
     // return value
-    return rho_pT(pLim,TLim);
+    return rho_pT(pLim, TLim);
 }
 
 
@@ -144,7 +144,7 @@ inline Foam::scalar Foam::eosIAPWS<Specie>::psi
 
     // return value
 
-    return psiH_pT(pLim,TLim);  // #NOTE: for compressibility
+    return psiH_pT(pLim, TLim);  // #NOTE: for compressibility
 
 }
 
@@ -166,7 +166,7 @@ inline Foam::scalar Foam::eosIAPWS<Specie>::Z
     pLim = max(pLim,pMin_);   // bound min pressure
 
     // return value
-    return pLim/rho_pT(pLim,TLim)/RSpecific_/TLim; // #NOTE: for compressibility
+    return pLim/rho_pT(pLim, TLim)/RSpecific_/TLim; // #NOTE: for compressibility
 }
 
 
@@ -187,7 +187,7 @@ inline Foam::scalar Foam::eosIAPWS<Specie>::cpMcv
     pLim = max(pLim,pMin_);   // bound min pressure
 
     // return value
-    return (cp_pT(pLim,TLim)-cv_pT(pLim,TLim));
+    return (cp_pT(pLim, TLim)-cv_pT(pLim, TLim));
 }
 
 
