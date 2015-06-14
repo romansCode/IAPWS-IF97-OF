@@ -1,16 +1,16 @@
 IAPWS-IF97-OF
 =============
 
-IAPWS-IF97 water properties for OpenFOAM (R)
+IAPWS-IF97 water properties for OpenFOAM (R). Description and wiki page can be found in the openfoam wiki http://openfoamwiki.net/index.php/Contrib/IAPWS-IF97-OF
 
 * Installation
 
-  ** Prerequisites
+  * Prerequisites
 
     1. Full installation of OpenFOAM >=2.2 from www.openfoam.org
     2. Installed freesteam >=2.0 from http://freesteam.sourceforge.net/ 
   
-  ** Installation
+  * Installation
   
     1. git clone https://github.com/romansCode/IAPWS-IF97-OF.git
     2. cd IAPWS-IF97-OF
