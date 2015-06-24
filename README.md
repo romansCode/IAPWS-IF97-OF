@@ -7,7 +7,7 @@ IAPWS-IF97 water properties for OpenFOAM (R). Description and wiki page can be f
 
   * Prerequisites
 
-    1. Full installation of OpenFOAM >=2.2 from www.openfoam.org
+    1. Full installation of OpenFOAM >=2.2 (2.2.x, 2.3.x, 2.4.x) from www.openfoam.org
     2. Installed freesteam >=2.0 from http://freesteam.sourceforge.net/ 
   
   * Installation
