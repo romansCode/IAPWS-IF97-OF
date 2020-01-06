@@ -110,7 +110,7 @@ template<class Thermo, template<class> class Type>
 inline Foam::word
 Foam::species::thermo<Thermo, Type>::heName()
 {
-    return Type<thermo<Thermo, Type> >::name();
+    return Type<thermo<Thermo, Type> >::energyName();
 }
 
 
@@ -134,7 +134,7 @@ template<class Thermo, template<class> class Type>
 inline Foam::scalar
 Foam::species::thermo<Thermo, Type>::cpv(const scalar p, const scalar T) const
 {
-    return Type<thermo<Thermo, Type> >::cpv(*this, p, T);
+    return Type<thermo<Thermo, Type> >::Cpv(*this, p, T);
 }
 
 
@@ -149,13 +149,13 @@ Foam::species::thermo<Thermo, Type>::gamma(const scalar p, const scalar T) const
 
 template<class Thermo, template<class> class Type>
 inline Foam::scalar
-Foam::species::thermo<Thermo, Type>::cpBycpv
+Foam::species::thermo<Thermo, Type>::CpByCpv
 (
     const scalar p,
     const scalar T
 ) const
 {
-    return Type<thermo<Thermo, Type> >::cpBycpv(*this, p, T);
+    return Type<thermo<Thermo, Type> >::CpByCpv(*this, p, T);
 }
 
 

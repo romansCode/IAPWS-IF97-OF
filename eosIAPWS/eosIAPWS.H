@@ -106,13 +106,13 @@ class eosIAPWS
     // Private data
 
     // specific gas constant for water [J/kg/K]
-    static const scalar RSpecific_ = 0.461526e3;  // #NOTE: for compressibility
+    static constexpr scalar RSpecific_ = 0.461526e3;  // #NOTE: for compressibility
 
     //- max temperature at which clipping occurs [K]
-    static const scalar TMax_ = 1073;
+    static constexpr scalar TMax_ = 1073;
 
     //- min temperature at which clipping occurs [K]
-    static const scalar TMin_ = 273.15;
+    static constexpr scalar TMin_ = 273.15;
 
     //- max pressure at which clipping occurs [K]
     const scalar pMax_;

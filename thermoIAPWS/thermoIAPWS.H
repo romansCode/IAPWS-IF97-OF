@@ -232,7 +232,7 @@ public:
 
                 //- Ratio of heat capacity at constant pressure to that at
                 //  constant pressure/volume []
-                inline scalar cpBycpv(const scalar p, const scalar T) const;
+                inline scalar CpByCpv(const scalar p, const scalar T) const;
 
                 //- Sensible internal energy [J/kmol]
                 inline scalar es(const scalar p, const scalar T) const;

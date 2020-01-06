@@ -106,17 +106,17 @@ class hIAPWSThermo
 
         //- Heat of formation
         //  Note: input in [J/kg], but internally uses [J/kmol]
-        static const scalar Hf_=0;
+        static constexpr scalar Hf_=0;
 
         //- Standard entropy
         //  Note: input in [J/kg/K], but internally uses [J/kmol/K]
-        static const scalar Sf_=0;
+        static constexpr scalar Sf_=0;
 
         //- max temperature at which clipping occurs [K]
-        static const scalar TMax_ = 1073;
+        static constexpr scalar TMax_ = 1073;
 
         //- min temperature at which clipping occurs [K]
-        static const scalar TMin_ = 273;
+        static constexpr scalar TMin_ = 273;
 
         //- max pressure at which clipping occurs [K]
         const scalar pMax_;
